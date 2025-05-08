@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: #333;
+    font-family: sans-serif;
+    counter-reset: main-section grammar-sub-topic-counter vocab-types lsrw-heading;
+}
+
+main 
+{
+    padding: 0.5rem 0 1rem 1rem;
+
+}
+
+/* Main Section Numbering */
+.main-section-heading::before {
+    counter-increment: main-section;
+    content: counter(main-section, upper-roman) ". ";
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+/* Grammar Sub-Topic Numbering */
+.grammar-sub-topic-heading {
+    counter-increment: grammar-sub-topic-counter;
+    position: relative;
+}
+
+.grammar-sub-topic-heading::before {
+    content: counter(grammar-sub-topic-counter) ". ";
+    font-weight: bold;
+    margin-right: 0.3em;
+}
+
+/* Vocabulary Section Numbering */
+.types-of-vocab-heading {
+    counter-increment: vocab-types;
+    position: relative;
+}
+
+.types-of-vocab-heading::before {
+    content: counter(vocab-types) ". ";
+    font-weight: bold;
+    margin-right: 0.3em;
+}
+
+
+/* class="lsrw-heading"  */
+.lsrw-heading
+{
+    counter-increment: lsrw-heading;
+    position: relative;
+}
+
+.lsrw-heading::before
+{
+    content: counter(lsrw-heading) ". ";
+    font-weight: bold;
+    margin-right: 0.3rem;
+
+
+}
+/* Header Section */
+header {
+    background: #0074D9;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.website-description {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+h2 {
+    /* line-height: ; */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border: 1px solid gray;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Section Styling */
+.section {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.section h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
